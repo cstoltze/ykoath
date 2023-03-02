@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+ykman oath accounts list \
+	| rofi -dmenu -i \
+	| xargs -r ykman oath accounts code \
+	| awk '{print $2}' \
+	| xargs -r xdotool type
