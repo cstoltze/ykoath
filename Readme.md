@@ -17,7 +17,7 @@ TODO
 1. Make sure your Yubikey is plugged in before running `ykoath`
 2. Ensure that the correct textbox has focus before running. So that the code is typed into the correct place.
 3. Use a keyboard shortcut to launch `ykoath`
-    1. in my i3 config, I use ...
+    1. My keyboard shortcut is `Super-O`. In my i3 config, this reads as `bindsym Mod4+o exec ykoath` 
 
 ## Rough edges
 
