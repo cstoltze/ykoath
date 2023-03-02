@@ -9,18 +9,19 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-      pkgs = import nixpkgs { inherit system; };
-      in rec {
-      defaultPackage = packages.ykoath;
-      packages.ykoath = pkgs.writeShellApplication {
-        name = "ykoath";
-	text = builtins.readFile ./ykoath;
-	runtimeInputs = [
-	  pkgs.yubikey-manager
-	  pkgs.rofi
-	  pkgs.xdotool
-	];
-	};
-	}
-	);
+        pkgs = import nixpkgs { inherit system; };
+      in
+      rec {
+        defaultPackage = packages.ykoath;
+        packages.ykoath = pkgs.writeShellApplication {
+          name = "ykoath";
+          text = builtins.readFile ./ykoath;
+          runtimeInputs = [
+            pkgs.yubikey-manager
+            pkgs.rofi
+            pkgs.xdotool
+          ];
+        };
+      }
+    );
 }
