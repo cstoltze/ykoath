@@ -12,6 +12,7 @@
         pkgs = import nixpkgs { inherit system; };
       in
       rec {
+        formatter = pkgs.nixpkgs-fmt;
         defaultPackage = packages.ykoath;
         packages.ykoath = pkgs.writeShellApplication {
           name = "ykoath";
