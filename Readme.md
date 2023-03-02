@@ -1,6 +1,6 @@
 # ykoath
 
-`ykoath` is a simple way to use oath codes stored on your Yubikey.
+`ykoath` is a convenient way to use oath codes stored on your Yubikey.
 
 Ykoath uses [rofi](https://github.com/davatorium/rofi) to select the code you want to use. Upon selection, the corresponding oath code is requested from the Yubikey and typed onto the screen. (not copied to the clipboard)
 
