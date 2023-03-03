@@ -1,8 +1,5 @@
 {
   description = "A rofi frontend to type TOTP codes from yubikey";
-  # There's a nice tutorial here on shell scripts in nix
-  # https://ertt.ca/nix/shell-scripts/
-  # I've still got some work to do to clean this up
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
