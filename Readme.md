@@ -10,7 +10,31 @@ The simplest way to run is with [nix](https://nixos.org/download.html). If you h
 
 ## Installation
 
-TODO
+### with nix
+
+`nix-env -iA github:cstoltze/ykoath`
+
+To uninstall
+
+`nix-env --uninstall github:cstoltze/ykoath`
+
+### NixOS (with flakes enabled)
+
+add this url to your flake inputs. In your `flake.nix` file, add the following code within the `inputs` stanza.
+
+```nix
+ykoath.url = "github:cstoltze/ykoath";
+```
+
+TODO: ... and add the following code to environment.systemPackages...
+
+### Other linux
+
+1. Ensure that all dependencies are installed
+    1. rofi
+    1. xdotool
+    1. yubikey-manager (which provides `ykman`)
+1. Copy the `ykoath` script into your PATH
 
 ## Tips
 
